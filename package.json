@@ -6,8 +6,9 @@
   "scripts": {
     "pre-commit": "cd api && npm run pre-commit && cd ../client && npm run pre-commit",
     "install-dependencies": "npm install && cd api && npm install && cd ../client && npm install",
-    "build": "cd api/src && tsc && cd ../client && npm run build",
-    "start:production": "cd api && npm run start:production && cd ../client && npm run start:production"
+    "build": "cd api && npm run build && cd ../client && npm run build",
+    "start:production": "cd api && npm run start:production && cd ../client && npm run start:production",
+    "postinstall": "npm run build"
   },
   "devDependencies": {
     "husky": "^4.0.0-beta.5"
